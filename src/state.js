@@ -1,18 +1,37 @@
+
+
 export class Calculator {
-  constructor(result) {
+  constructor(result, num) {
     this.result = result;
+    this.num = num;
   }
 
   add(num) {
-    this.result += num;
+    if (num) {
+      this.result += num;
+    } else {
+      return;
+    }
   }
   sub(num) {
-    this.result -= num;
+    if (num) {
+      this.result -= num;
+    } else {
+      return;
+    }
   }
   mult(num) {
-    this.result *= num;
+    if (num) {
+      this.result *= num;
+    } else {
+      return;
+    }
   }
   div(num) {
-    this.result /= num;
+    if (num) {
+      this.result /= num;
+    } else {
+      return;
+    }
   }
 }
