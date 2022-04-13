@@ -4,8 +4,6 @@ import { Calculator } from "./state";
 export default function Buttons() {
   const [value, setValue] = useState(0);
 
-  const handle = new Calculator(value);
-
   function handleOne(e) {
     if (value == 0) {
       setValue(e.target.innerText);
@@ -13,14 +11,11 @@ export default function Buttons() {
       setValue(`${value}${e.target.innerText}`);
     }
   }
-  console.log(handle.result);
 
-  function pluse() {
-    setValue(`${value} +`);
-  }
   function equal() {
     setValue(eval(value));
   }
+
   return (
     <div>
       <input className="display" type="text" value={value}></input>
@@ -61,7 +56,7 @@ export default function Buttons() {
         <div onClick={handleOne} className="button">
           6
         </div>
-        <div onClick={pluse} className="button_yellow">
+        <div onClick={handleOne} className="button_yellow">
           +
         </div>
         <div onClick={handleOne} className="button">
