@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import { Calculator } from "./state";
+
 import Display from "./Calculator";
 
 function App() {

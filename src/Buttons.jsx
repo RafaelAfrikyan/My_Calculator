@@ -3,9 +3,7 @@ import { Calculator } from "./state";
 
 export default function Buttons() {
   const [value, setValue] = useState(0);
-  const [result, setResult] = useState();
-  const [sign, setSign] = useState(false);
-  const [gago, setGago] = useState(false);
+
   const handle = new Calculator(value);
 
   function handleOne(e) {
