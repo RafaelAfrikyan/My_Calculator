@@ -15,10 +15,9 @@
 
 .display {
   text-align: right;
-  
-  padding: 16px 8px;
-  line-height: 100px;
-  font-size: 30px;
+  padding: 1px 8px;
+  line-height: 70px;
+  font-size: 70px;
   background-color: black;
   border: none;
   color: white;
@@ -77,4 +76,8 @@
   background-color: white;
   color: rgb(172, 118, 0);
   transition: 0.3s ease-in-out;
+}
+
+.time {
+  color: white;
 }

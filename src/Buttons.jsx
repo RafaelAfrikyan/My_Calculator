@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Calculator } from "./state";
+import Time from "./Time";
 
 export default function Buttons() {
   const blt = new Calculator(0);
@@ -95,8 +96,6 @@ export default function Buttons() {
     }
   }
 
-  console.log(calcValue);
-
   function equal() {
     try {
       setValue(eval(value).toString());
@@ -112,7 +111,8 @@ export default function Buttons() {
 
   return (
     <div>
-      <input className="display" type="text" value={value}></input>
+      <Time />
+      <h1 className="display">{value}</h1>
       <div className="buttons">
         <div
           onClick={() => {
@@ -130,20 +130,20 @@ export default function Buttons() {
         {arr.map((el) => {
           if (el === "*" || el === "/") {
             return (
-              <div onClick={handleOne} className="button_first">
+              <div key={el} onClick={handleOne} className="button_first">
                 {el}
               </div>
             );
           }
           if (el === "." || el === "-" || el === "+" || el === "%") {
             return (
-              <div onClick={handleOne} className="button_yellow">
+              <div key={el} onClick={handleOne} className="button_yellow">
                 {el}
               </div>
             );
           } else
             return (
-              <div onClick={calc} className="button">
+              <div key={el} onClick={calc} className="button">
                 {el}
               </div>
             );
